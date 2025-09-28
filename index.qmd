@@ -80,7 +80,7 @@ format:
 
 ## Branch-håndtering
 
-* *git branch*: Lister alle branches. Brug -a for at se både lokale og remote branches.
+* *git branch*: Lister alle branches. Brug -a for at se både lokale og remote branches....
 
 * *git branch [navn]*: Opretter en ny branch med det specificerede navn.
 
