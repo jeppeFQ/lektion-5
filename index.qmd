@@ -67,7 +67,7 @@ format:
 
 ## `.gitignore` og `fetch`-pull`
 
-* [I terminal/GIT Bash] `> touch .gitignore`
+* [I terminal/GIT Bash] `> touch .gitignore`   
 
 * .gitignore er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere---altså filder der ikke skal trackes eller inkluderes i version control.
   * Der er mange filer du ikke vil have i dit repository: log-filer, dependencies, konfigurationsfiler, backup-filer, store data, etc. 
