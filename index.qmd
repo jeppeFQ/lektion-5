@@ -1,0 +1,125 @@
+---
+title: "Git og versionskontrol"
+subtitle: ""
+author: "Jeppe Fjeldgaard Qvist"
+date: today
+format: 
+  revealjs:
+    include-after-body: "resources/timer.html"
+    navigation-mode: linear
+    slide-number: c
+    show-slide-number: print
+    embed-resources: true
+    self-contained-math: true
+    smaller: true
+    scrollable: true
+    theme: default
+    include-in-header: 
+      - text: |
+          <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+          <style>
+          .reveal {
+            font-family: "Libre Baskerville", serif !important;
+          }
+          .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: "Libre Baskerville", serif !important;
+          }
+          .reveal .slides section {
+            overflow: visible !important;
+          }
+          .reveal ul, .reveal ol {
+            margin: 0.5em 0;
+            padding-left: 1.5em;
+            overflow: visible !important;
+          }
+          .reveal li {
+            margin-bottom: 0.25em;
+            overflow: visible !important;
+          }
+          </style>
+---
+
+## Dagens program
+
+1. Opsamling på Git 
+2. Introduktion til OOP
+3. Dagens workshop
+
+## Git opsamling 
+
+* *Repository (repo)*: Et Git-repository er den mappe, der indeholder alle filer og den komplette versionshistorik for et projekt. Det kan være lokalt på vores computer eller remote på en server som GitHub.
+
+* *Working Directory*: Det aktuelle arbejdsområde hvor vi redigerer filer. Dette er den version af filerne, vi kan se og modificere i dit filsystem.
+
+* *Staging Area (Index)*: Et mellemområde hvor vi "forbereder" ændringer til næste commit. Filer tilføjes her med `git add` (eller knappen i Git-panelet) og gives en valgfri kommentar relevant for ændringerne før de `committes`.
+
+* *Commit*: Et snapshot/billede/kopi af projektets tilstand på et bestemt tidspunkt. Hver commit har en unik hash-identifikator og indeholder information om ændringer, forfatter og tidspunkt.
+
+* *Branch*: En parallel udviklingslinje. Giver mulighed for at arbejde på forskellige features eller eksperimenter uden at påvirke hovedkoden. Master/main er typisk standardgrenen.
+
+* *Merge*: Processen der kombinerer ændringer fra en branch ind i en anden.
+
+---
+
+* *Clone*: At lave en komplet kopi af et remote repository til din lokale maskine.
+
+* Clone vs. *Fork*: `Clone` downloader til din lokale maskine. `Fork` opretter din egen kopi på serveren (f.eks. GitHub) som du kan modificere uden at påvirke originalen. Kloning er typisk det første skridt når du vil bidrage til et eksisterende projekt. Fork kan anvendes hvis du vil lave din egen variant af et projekt der går i en anden retning. Derudover er Fork også særligt nyttigt i open source udvikling, hvor hundredvis af mennesker kan bidrage til samme projekt uden at have direkte adgang til det originale repository. Det giver en sikker måde at eksperimentere og bidrage på.Retry
+
+## `.gitignore` og `fetch`-pull`
+
+* [I terminal/GIT Bash] `> touch .gitignore`
+
+* .gitignore er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere---altså filder der ikke skal trackes eller inkluderes i version control.
+  * Der er mange filer du ikke vil have i dit repository: log-filer, dependencies, konfigurationsfiler, backup-filer, store data, etc. 
+
+* *git fetch*: Henter information om ændringer fra remote repository uden at merge dem ind i din branch.
+
+* *git pull*: Henter og merger ændringer fra remote repository til din aktuelle branch.
+
+* *git push*: Sender dine lokale commits op til remote repository.
+
+## Branch-håndtering
+
+* *git branch*: Lister alle branches. Brug -a for at se både lokale og remote branches.
+
+* *git branch [navn]*: Opretter en ny branch med det specificerede navn.
+
+* *git checkout [branch-navn]*: Skifter til en eksisterende branch.
+
+* *git checkout -b [navn]*: Opretter og skifter til en ny branch i én kommando.
+
+* *git merge [branch-navn]*: Merger den specificerede branch ind i din aktuelle branch.
+
+* *git branch -d [navn]*: Sletter en branch (kun hvis den er merged).
+
+## Øvelsens Git-"setup"
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {style="font-size: 0.8em;"}
+0. Opret en bruger på GitHub og hent GitHub Desktop
+1. Én i studiegrupper opretter et repository på GitHub
+2. Denne person laver følgende fil med koden: `print("Første commit")`
+3. Den næste kloner repositoriet ned på egen computer
+4. Ændrer koden til: `print("Første commit + anden commit")` og "pusher"
+5. Tredje person gør det samme, tilføjer: `print("Første commit + anden commit + tredje commit")`
+:::
+:::
+
+::: {.column width="50%"}
+
+```
+1. git pull     📥 (hent seneste ændringer)
+2. Arbejd       💻 (skriv kode)  
+3. git add      📋 (stage ændringer)
+4. git commit   💾 (gem lokalt)
+5. git push     📤 (del med andre)
+```
+:::
+
+::::
+
+*Hvis der er tid tilbage, så lav i studiegruppen et repository til jeres mini-projekt.* 
+
+
