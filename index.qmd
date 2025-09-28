@@ -63,14 +63,20 @@ format:
 
 * *Clone*: At lave en komplet kopi af et remote repository til din lokale maskine.
 
-* Clone vs. *Fork*: `Clone` downloader til din lokale maskine. `Fork` opretter din egen kopi på serveren (f.eks. GitHub) som du kan modificere uden at påvirke originalen. Kloning er typisk det første skridt når du vil bidrage til et eksisterende projekt. Fork kan anvendes hvis du vil lave din egen variant af et projekt der går i en anden retning. Derudover er Fork også særligt nyttigt i open source udvikling, hvor hundredvis af mennesker kan bidrage til samme projekt uden at have direkte adgang til det originale repository. Det giver en sikker måde at eksperimentere og bidrage på.Retry
+* Clone vs. *Fork*: `Clone` downloader til din lokale maskine. `Fork` opretter din egen kopi på serveren (f.eks. GitHub) som du kan modificere uden at påvirke originalen. 
+  * Kloning er typisk det første skridt når du vil bidrage til et eksisterende projekt. 
+  * Fork kan anvendes hvis du vil lave din egen variant af et projekt der går i en anden retning. 
+  * Derudover er Fork også særligt nyttigt i open source udvikling, hvor hundredvis af mennesker kan bidrage til samme projekt uden at have direkte adgang til det originale repository. Det giver en sikker måde at eksperimentere og bidrage på.
 
 ## `.gitignore` og 
 
 * [I terminal/GIT Bash] `> touch .gitignore`   
 
-* .gitignore er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere---altså filder der ikke skal trackes eller inkluderes i version control.
+* `.gitignore` er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere---altså filder der ikke skal trackes eller inkluderes i version control.
   * Der er mange filer du ikke vil have i dit repository: log-filer, dependencies, konfigurationsfiler, backup-filer, store data, etc. 
+
+* `.gitignore` virker kun på untracked filer
+  * Hvis en fil allerede er tracked, skal du først fjerne den med `git rm --cached filnavn`
 
 ### Opbygning af `.gitignore` 
 * `*.txt` ignorerer alle filer der ender på .txt
@@ -105,34 +111,37 @@ format:
 
 * *git branch -d [navn]*: Sletter en branch (kun hvis den er merged).
 
-## Øvelsens Git-"setup"
+## Workshoppens Git-"setup"
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 ::: {style="font-size: 0.8em;"}
-0. Opret en bruger på GitHub og hent GitHub Desktop
-1. Én i studiegrupper opretter et repository på GitHub
-2. Denne person laver følgende fil med koden: `print("Første commit")`
-3. Den næste kloner repositoriet ned på egen computer
-4. Ændrer koden til: `print("Første commit + anden commit")` og "pusher"
-5. Tredje person gør det samme, tilføjer: `print("Første commit + anden commit + tredje commit")`
+
+1. Lav og check (mindst) én `brach` ud
+2. I denne `brach` ...
+    * ...
+    * ttt
+    * `push` arbejds-branchen til GitHub 
+3. Merge `branchen` med jeres `main-branch`
+4. ... 
+5. ...
 :::
 :::
 
 ::: {.column width="50%"}
 
 ```
+0. git fetch    X  (tjek for ændringer)
 1. git pull     📥 (hent seneste ændringer)
-2. Arbejd       💻 (skriv kode)  
-3. git add      📋 (stage ændringer)
-4. git commit   💾 (gem lokalt)
-5. git push     📤 (del med andre)
+2. Branch       Y  (lav ny branch)  
+3. Arbejd       💻 (skriv kode)  
+4. git add      📋 (stage ændringer)
+5. git commit   💾 (gem lokalt)
+6. git push     📤 (del med andre)
 ```
 :::
 
 ::::
-
-*Hvis der er tid tilbage, så lav i studiegruppen et repository til jeres mini-projekt.* 
 
 

@@ -1065,17 +1065,39 @@ Jeppe Fjeldgaard Qvist
 
 <ul>
 <li><p><em>Clone</em>: At lave en komplet kopi af et remote repository til din lokale maskine.</p></li>
-<li><p>Clone vs. <em>Fork</em>: <code>Clone</code> downloader til din lokale maskine. <code>Fork</code> opretter din egen kopi på serveren (f.eks. GitHub) som du kan modificere uden at påvirke originalen. Kloning er typisk det første skridt når du vil bidrage til et eksisterende projekt. Fork kan anvendes hvis du vil lave din egen variant af et projekt der går i en anden retning. Derudover er Fork også særligt nyttigt i open source udvikling, hvor hundredvis af mennesker kan bidrage til samme projekt uden at have direkte adgang til det originale repository. Det giver en sikker måde at eksperimentere og bidrage på.Retry</p></li>
+<li><p>Clone vs. <em>Fork</em>: <code>Clone</code> downloader til din lokale maskine. <code>Fork</code> opretter din egen kopi på serveren (f.eks. GitHub) som du kan modificere uden at påvirke originalen.</p>
+<ul>
+<li>Kloning er typisk det første skridt når du vil bidrage til et eksisterende projekt.</li>
+<li>Fork kan anvendes hvis du vil lave din egen variant af et projekt der går i en anden retning.</li>
+<li>Derudover er Fork også særligt nyttigt i open source udvikling, hvor hundredvis af mennesker kan bidrage til samme projekt uden at have direkte adgang til det originale repository. Det giver en sikker måde at eksperimentere og bidrage på.</li>
+</ul></li>
 </ul>
 </section>
-<section id="gitignore-og-fetch-pull" class="slide level2">
-<h2><code>.gitignore</code> og <code>fetch</code>-pull``</h2>
+<section id="gitignore-og" class="slide level2">
+<h2><code>.gitignore</code> og</h2>
 <ul>
 <li><p>[I terminal/GIT Bash] <code>&gt; touch .gitignore</code></p></li>
-<li><p>.gitignore er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere—altså filder der ikke skal trackes eller inkluderes i version control.</p>
+<li><p><code>.gitignore</code> er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere—altså filder der ikke skal trackes eller inkluderes i version control.</p>
 <ul>
 <li>Der er mange filer du ikke vil have i dit repository: log-filer, dependencies, konfigurationsfiler, backup-filer, store data, etc.</li>
 </ul></li>
+<li><p><code>.gitignore</code> virker kun på untracked filer</p>
+<ul>
+<li>Hvis en fil allerede er tracked, skal du først fjerne den med <code>git rm --cached filnavn</code></li>
+</ul></li>
+</ul>
+<h3 id="opbygning-af-.gitignore">Opbygning af <code>.gitignore</code></h3>
+<ul>
+<li><p><code>*.txt</code> ignorerer alle filer der ender på .txt</p></li>
+<li><p><code>temp/</code> ignorerer mappen temp og alt indhold</p></li>
+<li><p><code>!important.txt</code> tvinger Git til at tracke denne fil selvom den matcher et andet mønster</p></li>
+<li><p><code>/</code> i begyndelsen matcher kun i rod-mappen</p></li>
+<li><p><code>**</code> matcher mapper på alle niveauer</p></li>
+</ul>
+</section>
+<section id="fetch-pull" class="slide level2">
+<h2><code>fetch</code>-pull`</h2>
+<ul>
 <li><p><em>git fetch</em>: Henter information om ændringer fra remote repository uden at merge dem ind i din branch.</p></li>
 <li><p><em>git pull</em>: Henter og merger ændringer fra remote repository til din aktuelle branch.</p></li>
 <li><p><em>git push</em>: Sender dine lokale commits op til remote repository.</p></li>
@@ -1083,20 +1105,31 @@ Jeppe Fjeldgaard Qvist
 </section>
 <section id="branch-håndtering" class="slide level2">
 <h2>Branch-håndtering</h2>
-<p>git branch: Lister alle branches. Brug -a for at se både lokale og remote branches. git branch [navn]: Opretter en ny branch med det specificerede navn. git checkout [branch-navn]: Skifter til en eksisterende branch. git checkout -b [navn]: Opretter og skifter til en ny branch i én kommando. git merge [branch-navn]: Merger den specificerede branch ind i din aktuelle branch. git branch -d [navn]: Sletter en branch (kun hvis den er merged).</p>
+<ul>
+<li><p><em>git branch</em>: Lister alle branches. Brug -a for at se både lokale og remote branches.</p></li>
+<li><p><em>git branch [navn]</em>: Opretter en ny branch med det specificerede navn.</p></li>
+<li><p><em>git checkout [branch-navn]</em>: Skifter til en eksisterende branch.</p></li>
+<li><p><em>git checkout -b [navn]</em>: Opretter og skifter til en ny branch i én kommando.</p></li>
+<li><p><em>git merge [branch-navn]</em>: Merger den specificerede branch ind i din aktuelle branch.</p></li>
+<li><p><em>git branch -d [navn]</em>: Sletter en branch (kun hvis den er merged).</p></li>
+</ul>
 </section>
-<section id="øvelsens-git-setup" class="slide level2 scrollable">
-<h2>Øvelsens Git-“setup”</h2>
+<section id="workshoppens-git-setup" class="slide level2 scrollable">
+<h2>Workshoppens Git-“setup”</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div style="font-size: 0.8em;">
-<ol start="0" type="1">
-<li>Opret en bruger på GitHub og hent GitHub Desktop</li>
-<li>Én i studiegrupper opretter et repository på GitHub</li>
-<li>Denne person laver følgende fil med koden: <code>print(&quot;Første commit&quot;)</code></li>
-<li>Den næste kloner repositoriet ned på egen computer</li>
-<li>Ændrer koden til: <code>print(&quot;Første commit + anden commit&quot;)</code> og “pusher”</li>
-<li>Tredje person gør det samme, tilføjer: <code>print(&quot;Første commit + anden commit + tredje commit&quot;)</code></li>
+<ol type="1">
+<li>Lav og check (mindst) én <code>brach</code> ud</li>
+<li>I denne <code>brach</code> …
+<ul>
+<li>…</li>
+<li>ttt</li>
+<li><code>push</code> arbejds-branchen til GitHub</li>
+</ul></li>
+<li>Merge <code>branchen</code> med jeres <code>main-branch</code></li>
+<li>…</li>
+<li>…</li>
 </ol>
 </div>
 </div><div class="column" style="width:50%;">
