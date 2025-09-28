@@ -65,12 +65,25 @@ format:
 
 * Clone vs. *Fork*: `Clone` downloader til din lokale maskine. `Fork` opretter din egen kopi på serveren (f.eks. GitHub) som du kan modificere uden at påvirke originalen. Kloning er typisk det første skridt når du vil bidrage til et eksisterende projekt. Fork kan anvendes hvis du vil lave din egen variant af et projekt der går i en anden retning. Derudover er Fork også særligt nyttigt i open source udvikling, hvor hundredvis af mennesker kan bidrage til samme projekt uden at have direkte adgang til det originale repository. Det giver en sikker måde at eksperimentere og bidrage på.Retry
 
-## `.gitignore` og `fetch`-pull`
+## `.gitignore` og 
 
 * [I terminal/GIT Bash] `> touch .gitignore`   
 
 * .gitignore er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere---altså filder der ikke skal trackes eller inkluderes i version control.
   * Der er mange filer du ikke vil have i dit repository: log-filer, dependencies, konfigurationsfiler, backup-filer, store data, etc. 
+
+### Opbygning af `.gitignore` 
+* `*.txt` ignorerer alle filer der ender på .txt
+
+* `temp/` ignorerer mappen temp og alt indhold
+
+* `!important.txt` tvinger Git til at tracke denne fil selvom den matcher et andet mønster
+
+* `/` i begyndelsen matcher kun i rod-mappen
+
+* `**` matcher mapper på alle niveauer
+
+## `fetch`-pull`
 
 * *git fetch*: Henter information om ændringer fra remote repository uden at merge dem ind i din branch.
 
