@@ -1,5 +1,5 @@
 ---
-title: "Git og versionskontrol"
+title: "Workshop 1"
 subtitle: ""
 author: "Jeppe Fjeldgaard Qvist"
 date: today
