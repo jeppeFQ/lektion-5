@@ -123,6 +123,7 @@ format:
 1. Lav og check (mindst) én `brach` ud
 2. I denne `brach` laver i dagens arbejde
     * `push` (løbende) arbejds-branchen til GitHub 
+    * `pull`/`push` (løbende) hvis i arbejder op flere computere
 3. Merge `branchen` med jeres `main-branch`, *hvis* i føler dagens arbejde er færdigt
 :::
 :::

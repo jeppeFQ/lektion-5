@@ -1073,6 +1073,17 @@ Jeppe Fjeldgaard Qvist
 </ul></li>
 </ul>
 </section>
+<section id="branch-håndtering" class="slide level2">
+<h2><code>Branch</code>-håndtering</h2>
+<ul>
+<li><p><em>git branch</em>: Lister alle branches. Brug -a for at se både lokale og remote branches.</p></li>
+<li><p><em>git branch [navn]</em>: Opretter en ny branch med det specificerede navn.</p></li>
+<li><p><em>git checkout [branch-navn]</em>: Skifter til en eksisterende branch.</p></li>
+<li><p><em>git checkout -b [navn]</em>: Opretter og skifter til en ny branch i én kommando.</p></li>
+<li><p><em>git merge [branch-navn]</em>: Merger den specificerede branch ind i din aktuelle branch.</p></li>
+<li><p><em>git branch -d [navn]</em>: Sletter en branch (kun hvis den er merged).</p></li>
+</ul>
+</section>
 <section id="gitignore" class="slide level2">
 <h2><code>.gitignore</code></h2>
 <ul>
@@ -1105,39 +1116,26 @@ Jeppe Fjeldgaard Qvist
 <li><p><em>git push</em>: Sender dine lokale commits op til remote repository.</p></li>
 </ul>
 </section>
-<section id="branch-håndtering" class="slide level2">
-<h2>Branch-håndtering</h2>
-<ul>
-<li><p><em>git branch</em>: Lister alle branches. Brug -a for at se både lokale og remote branches.</p></li>
-<li><p><em>git branch [navn]</em>: Opretter en ny branch med det specificerede navn.</p></li>
-<li><p><em>git checkout [branch-navn]</em>: Skifter til en eksisterende branch.</p></li>
-<li><p><em>git checkout -b [navn]</em>: Opretter og skifter til en ny branch i én kommando.</p></li>
-<li><p><em>git merge [branch-navn]</em>: Merger den specificerede branch ind i din aktuelle branch.</p></li>
-<li><p><em>git branch -d [navn]</em>: Sletter en branch (kun hvis den er merged).</p></li>
-</ul>
-</section>
 <section id="workshoppens-git-setup" class="slide level2 scrollable">
 <h2>Workshoppens Git-“setup”</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div style="font-size: 0.8em;">
-<ol type="1">
+<ol start="0" type="1">
+<li>Lav en <code>.gitignore</code>-fil</li>
 <li>Lav og check (mindst) én <code>brach</code> ud</li>
-<li>I denne <code>brach</code> …
+<li>I denne <code>brach</code> laver i dagens arbejde
 <ul>
-<li>…</li>
-<li>ttt</li>
-<li><code>push</code> arbejds-branchen til GitHub</li>
+<li><code>push</code> (løbende) arbejds-branchen til GitHub</li>
+<li><code>pull</code>/<code>push</code> (løbende) hvis i arbejder op flere computere</li>
 </ul></li>
-<li>Merge <code>branchen</code> med jeres <code>main-branch</code></li>
-<li>…</li>
-<li>…</li>
+<li>Merge <code>branchen</code> med jeres <code>main-branch</code>, <em>hvis</em> i føler dagens arbejde er færdigt</li>
 </ol>
 </div>
 </div><div class="column" style="width:50%;">
-<pre><code>0. git fetch    X  (tjek for ændringer)
+<pre><code>0. git fetch    ⭕  (tjek for ændringer)
 1. git pull     📥 (hent seneste ændringer)
-2. Branch       Y  (lav ny branch)  
+2. Branch       🪾  (lav ny branch)  
 3. Arbejd       💻 (skriv kode)  
 4. git add      📋 (stage ændringer)
 5. git commit   💾 (gem lokalt)
