@@ -5,7 +5,7 @@ author: "Jeppe Fjeldgaard Qvist"
 date: today
 format: 
   revealjs:
-    include-after-body: "resources/timer.html"
+    #include-after-body: "resources/timer.html"
     navigation-mode: linear
     slide-number: c
     show-slide-number: print
@@ -57,9 +57,9 @@ format:
 
 * *Branch*: En parallel udviklingslinje. Giver mulighed for at arbejde på forskellige features eller eksperimenter uden at påvirke hovedkoden. Master/main er typisk standardgrenen.
 
-* *Merge*: Processen der kombinerer ændringer fra en branch ind i en anden.
-
 ---
+
+* *Merge*: Processen der kombinerer ændringer fra en branch ind i en anden.
 
 * *Clone*: At lave en komplet kopi af et remote repository til din lokale maskine.
 
@@ -68,36 +68,7 @@ format:
   * Fork kan anvendes hvis du vil lave din egen variant af et projekt der går i en anden retning. 
   * Derudover er Fork også særligt nyttigt i open source udvikling, hvor hundredvis af mennesker kan bidrage til samme projekt uden at have direkte adgang til det originale repository. Det giver en sikker måde at eksperimentere og bidrage på.
 
-## `.gitignore` og 
-
-* [I terminal/GIT Bash] `> touch .gitignore`   
-
-* `.gitignore` er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere---altså filder der ikke skal trackes eller inkluderes i version control.
-  * Der er mange filer du ikke vil have i dit repository: log-filer, dependencies, konfigurationsfiler, backup-filer, store data, etc. 
-
-* `.gitignore` virker kun på untracked filer
-  * Hvis en fil allerede er tracked, skal du først fjerne den med `git rm --cached filnavn`
-
-### Opbygning af `.gitignore` 
-* `*.txt` ignorerer alle filer der ender på .txt
-
-* `temp/` ignorerer mappen temp og alt indhold
-
-* `!important.txt` tvinger Git til at tracke denne fil selvom den matcher et andet mønster
-
-* `/` i begyndelsen matcher kun i rod-mappen
-
-* `**` matcher mapper på alle niveauer
-
-## `fetch`-pull`
-
-* *git fetch*: Henter information om ændringer fra remote repository uden at merge dem ind i din branch.
-
-* *git pull*: Henter og merger ændringer fra remote repository til din aktuelle branch.
-
-* *git push*: Sender dine lokale commits op til remote repository.
-
-## Branch-håndtering
+## `Branch`-håndtering
 
 * *git branch*: Lister alle branches. Brug -a for at se både lokale og remote branches.
 
@@ -111,6 +82,36 @@ format:
 
 * *git branch -d [navn]*: Sletter en branch (kun hvis den er merged).
 
+## `.gitignore` 
+
+* [I terminal/GIT Bash] `> touch .gitignore`   
+
+* `.gitignore` er en speciel fil der fortæller Git hvilke filer og mapper det skal ignorere---altså filder der ikke skal trackes eller inkluderes i version control.
+  * Der er mange filer du ikke vil have i dit repository: log-filer, dependencies, konfigurationsfiler, backup-filer, store data, etc. 
+
+* `.gitignore` virker kun på untracked filer
+  * Hvis en fil allerede er tracked, skal du først fjerne den med `git rm --cached filnavn`
+
+## Opbygning af `.gitignore` 
+
+* `*.txt` ignorerer alle filer der ender på .txt
+
+* `temp/` ignorerer mappen temp og alt indhold
+
+* `!important.txt` tvinger Git til at tracke denne fil selvom den matcher et andet mønster
+
+* `/` i begyndelsen matcher kun i rod-mappen
+
+* `**` matcher mapper på alle niveauer
+
+## `fetch`-`pull`
+
+* *git fetch*: Henter information om ændringer fra remote repository uden at merge dem ind i din branch.
+
+* *git pull*: Henter og merger ændringer fra remote repository til din aktuelle branch.
+
+* *git push*: Sender dine lokale commits op til remote repository.
+
 ## Workshoppens Git-"setup"
 
 :::: {.columns}
@@ -118,23 +119,20 @@ format:
 ::: {.column width="50%"}
 ::: {style="font-size: 0.8em;"}
 
+0. Lav en `.gitignore`-fil
 1. Lav og check (mindst) én `brach` ud
-2. I denne `brach` ...
-    * ...
-    * ttt
-    * `push` arbejds-branchen til GitHub 
-3. Merge `branchen` med jeres `main-branch`
-4. ... 
-5. ...
+2. I denne `brach` laver i dagens arbejde
+    * `push` (løbende) arbejds-branchen til GitHub 
+3. Merge `branchen` med jeres `main-branch`, *hvis* i føler dagens arbejde er færdigt
 :::
 :::
 
 ::: {.column width="50%"}
 
 ```
-0. git fetch    X  (tjek for ændringer)
+0. git fetch    ⭕  (tjek for ændringer)
 1. git pull     📥 (hent seneste ændringer)
-2. Branch       Y  (lav ny branch)  
+2. Branch       🪾  (lav ny branch)  
 3. Arbejd       💻 (skriv kode)  
 4. git add      📋 (stage ændringer)
 5. git commit   💾 (gem lokalt)
