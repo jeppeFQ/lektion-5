@@ -1,0 +1,6 @@
+stoerrelse_id,stoerrelse,min_ansatte,max_ansatte
+0,Alle,50,100000
+1,50-99,50,99
+2,100-249,100,249
+3,250-499,250,499
+4,500+,500,100000

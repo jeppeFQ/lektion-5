@@ -1,6 +1,6 @@
 ---
-title: "Workshop 1"
-subtitle: ""
+title: "Lektion 6"
+subtitle: "Workshop"
 author: "Jeppe Fjeldgaard Qvist"
 date: today
 format: 
@@ -14,36 +14,12 @@ format:
     smaller: true
     scrollable: true
     theme: default
-    include-in-header: 
-      - text: |
-          <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-          <style>
-          .reveal {
-            font-family: "Libre Baskerville", serif !important;
-          }
-          .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-            font-family: "Libre Baskerville", serif !important;
-          }
-          .reveal .slides section {
-            overflow: visible !important;
-          }
-          .reveal ul, .reveal ol {
-            margin: 0.5em 0;
-            padding-left: 1.5em;
-            overflow: visible !important;
-          }
-          .reveal li {
-            margin-bottom: 0.25em;
-            overflow: visible !important;
-          }
-          </style>
 ---
 
 ## Dagens program
 
 1. Opsamling på Git 
-2. Introduktion til OOP
-3. Dagens workshop
+2. Dagens workshop
 
 ## Git opsamling 
 
@@ -114,33 +90,11 @@ format:
 
 ## Workshoppens Git-"setup"
 
-:::: {.columns}
-
-::: {.column width="50%"}
-::: {style="font-size: 0.8em;"}
-
 0. Lav en `.gitignore`-fil
 1. Lav og check (mindst) én `brach` ud
 2. I denne `brach` laver i dagens arbejde
     * `push` (løbende) arbejds-branchen til GitHub 
     * `pull`/`push` (løbende) hvis i arbejder op flere computere
 3. Merge `branchen` med jeres `main-branch`, *hvis* i føler dagens arbejde er færdigt
-:::
-:::
-
-::: {.column width="50%"}
-
-```
-0. git fetch    ⭕  (tjek for ændringer)
-1. git pull     📥 (hent seneste ændringer)
-2. Branch       🪾  (lav ny branch)  
-3. Arbejd       💻 (skriv kode)  
-4. git add      📋 (stage ændringer)
-5. git commit   💾 (gem lokalt)
-6. git push     📤 (del med andre)
-```
-:::
-
-::::
 
 

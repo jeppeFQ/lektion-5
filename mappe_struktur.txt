@@ -1,0 +1,52 @@
+diversitetsbarometer/
+│
+├── README.md                          L3   projektbeskrivelsen
+├── KOEREPLAN.md                       L5   aftalen, alle bygger efter
+├── DESIGN.md                          L5   gruppernes beslutninger — begynderniveau
+├── GRUPPE.md                          L3   hvem de er, aftaler, beslutningslog
+├── .gitignore                         L3
+├── .github/
+│   └── pull_request_template.md       L3
+│
+├── oevelse-barometerets-kerne.ipynb   L5   14 trin · klassen, data og placeringen
+├── oevelse-brugerfladen.ipynb         L6   12 trin · figuren, beskeden og opslaget
+│
+├── app/
+│   ├── README.md                      L5   sådan kører I appen — python -m shiny
+│   ├── app.py                         L6   tre faner: Barometer, Opslag, Om
+│   ├── om.md                          L6   skabelon — grupperne skriver den
+│   └── barometer/
+│       ├── __init__.py                L5
+│       ├── fejl.py                    L5   færdig
+│       ├── arbejdsplads.py            L5   skelet med 7 TODOer — deres egen klasse
+│       ├── referencetal.py            L5   færdig — notebook-koden fra L5, samlet
+│       ├── figur.py                   L6   færdig — Del 1 i notebooken forklarer den
+│       ├── tekst.py                   L6   færdig — Del 2
+│       └── opslag.py                  L6   færdig — Del 3
+│
+├── tests/
+│   ├── test_arbejdsplads.py           L5   7 tests til deres klasse
+│   └── test_udvidelser.py             L6   13 tests til figur, tekst og opslag
+│
+├── data/                              L5   referencetallene som en lille database
+│   ├── README.md                           skema, ER-diagram, og hvad der ikke findes
+│   ├── brancher.csv  regioner.csv  sektorer.csv  stoerrelser.csv  dimensioner.csv
+│   ├── grupper.csv                         224 grupper
+│   ├── fordelinger.csv                     672 fordelinger
+│   ├── metadata.csv
+│   ├── lav_syntetiske_data.py
+│   ├── lav_fladt.py
+│   └── afledt/
+│       └── referencetal.csv                alle tabeller samlet — kan altid laves igen
+│
+├── samarbejdspartnere/                L3
+│   ├── _skabelon.md
+│   └── jeppefq.md
+├── python/                            L3   småscripts, ikke en del af appen
+│   ├── README.md
+│   └── samarbejdspartnere.py
+├── rapport/
+│   └── .gitkeep                       L3
+│
+├── _quarto.yml                        L3   hjemmesiden — fyldes ud næste gang
+└── index.qmd                          L3   forsiden — "under opbygning"
