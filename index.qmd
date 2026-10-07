@@ -16,7 +16,7 @@ format:
     theme: default
 ---
 
-## Dagens program
+## Dagens program    
 
 1. Opsamling på Git 
 2. Dagens workshop
